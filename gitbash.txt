@@ -1,0 +1,15 @@
+
+
+$ git status(Check the git status)
+$ dir(List of the directory)
+$ cd directoryname(Change Directory)
+$ cd ..(exit previous directory)
+$ mkdir Directoryname(Create Directory/Folder)
+$ cd D:(declearing which folder hold the required file)
+$ git init(git initialization)
+$ git clone https://github.com/ShusmitaIslam/javalab.git(to introduce required github adress)
+$ git add filename(To add the file into git)
+$ git commit -m "Message to understand the file "
+$ git config --global user.email "shusmitashoron@gmail.com"
+$ git config --global user.name "ShusmitaIslam"
+$ git push origin master(Visible into the git/upload the file into the git)
