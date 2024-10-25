@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+            Scanner sc=new Scanner(System.in);
+            System.out.println("================================");
+            for(int j=0;j<3;j++){
+                String s1=sc.next();
+                String x=sc.next();
+                //Complete this line
+                System.out.print(s1);
+                int stringSize= s1.length();
+                for(int i=stringSize; i<=14;i++)
+                {
+                    System.out.print(" ");
+                }
+                
+                int stringSize1= x.length();
+                if(stringSize1!=3)
+                {
+                   for(int i=stringSize1; i<=2;i++)
+                   {
+                    System.out.print(0);
+                   } 
+                   System.out.print(x);
+                }
+                else
+                {
+                   System.out.print(x); 
+                }
+            System.out.println();  
+            
+            //System.out.printf("%-15s%03d%n", s1, x);  
+            }
+            System.out.println("================================");
+            
+    }
+}
+
+
+
