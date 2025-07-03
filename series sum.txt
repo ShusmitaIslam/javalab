@@ -1,0 +1,16 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Please give the series length value in integer: ");
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        
+        int sum = 0;
+        
+        for(int i=1; i<=n; i++)
+        {
+            sum += i;
+        }
+        System.out.print("Total sum of the numbers: "+sum);
+    }
+}
