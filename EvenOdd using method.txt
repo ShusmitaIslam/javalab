@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+    public static String EvenOdd(int a)
+    {
+        if(a%2==0)
+        {
+            return "Even";
+        }
+        else
+        {
+            return "Odd";
+        }
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the number: ");
+        int a = input.nextInt();
+        String result = EvenOdd(a);
+        System.out.print("The number is: "+result);
+    }
+}
