@@ -1,0 +1,31 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class BankAccount{
+    String accountHolderName, accountNumber;
+    double balance;
+    
+    BankAccount(String accountHolderName, String accountNumber, double balance)
+    {
+        this.accountHolderName = accountHolderName;
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+    }
+    void displayAccountDetails()
+    {
+        System.out.println("AccountHolderName: "+accountHolderName);
+        System.out.println("AccountNumber: "+accountNumber);
+        System.out.println("Balance: "+balance);
+    }
+    
+}
+class Main {
+    public static void main(String[] args) {
+        BankAccount input1 = new BankAccount("Harun","101201",1000);
+        BankAccount input2 = new BankAccount("Molla","545645",5000);
+        
+        input1.displayAccountDetails();
+        input2.displayAccountDetails();
+        
+    }
+}
