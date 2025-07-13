@@ -1,0 +1,42 @@
+class Main {
+    public static void main(String[] args) {
+        int sum = 0, k=0;
+        double average = 0;
+        int [] marks = { 95, 76, 55, 84, 99 };
+        
+        for(int i=1; i<=marks.length; i++)
+        {
+            System.out.println("Student "+i+": "+marks[k]);
+            k++;
+        }
+        
+        for(int mark: marks)
+        {
+            sum += mark;
+        }
+        average = sum / marks.length;
+        
+        System.out.println("The average marks is: "+average);
+        
+        if(average>=80)
+        {
+            System.out.println("Grade: A");
+        }
+        else if(average<=80 && average>=70)
+        {
+            System.out.println("Grade: B");
+        }
+        else if(average<=70 && average>=60)
+        {
+            System.out.println("Grade: C");
+        }
+        else if(average<=60 && average>=50)
+        {
+            System.out.println("Grade: D");
+        }
+        else
+        {
+            System.out.println("Grade: F");
+        }
+    }
+}
