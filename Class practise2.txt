@@ -1,0 +1,33 @@
+import java.util.Scanner;
+class Rectangle{
+    int length, width, area, peremeter;
+    
+    Rectangle(int length, int width){
+        this.length = length;
+        this.width = width;
+    }
+    
+    void calculateArea(){
+        area = length * width;
+        System.out.println("The area is: "+area);
+    }
+    void calculatePerimeter(){
+        peremeter = (length + width)*2;
+        System.out.println("The peremeter is: "+peremeter);
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Scanner input1 = new Scanner(System.in);
+        System.out.print("Length: ");
+        int l = input1.nextInt();
+        System.out.print("Width: ");
+        int w = input1.nextInt();
+
+        
+        Rectangle input2 = new Rectangle(l, w);
+        input2.calculateArea();
+        input2.calculatePerimeter();
+        
+    }
+}
