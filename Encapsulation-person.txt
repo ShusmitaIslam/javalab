@@ -1,0 +1,28 @@
+import java.util.Scanner;
+class Person{
+    private int age;
+    
+    int getAge(){
+        return age;
+    }
+    void setAge(int age){
+        if(age>=18 && age<=60){
+            this.age = age;
+            System.out.println("The person's age is: "+age);
+        }
+        else{
+            System.out.println("Invalid age! Age must be between 18 and 60.");
+        }
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Person input = new Person();
+        
+        System.out.print("Enter the age: ");
+        Scanner input1 = new Scanner(System.in);
+        int a = input1.nextInt();
+        
+        input.setAge(a);
+    }
+}
