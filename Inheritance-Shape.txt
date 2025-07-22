@@ -1,0 +1,36 @@
+import java.util.Scanner;
+class Shape{
+    void calculateArea(){
+        System.out.println("Calculating area.");
+    }
+}
+class Circle extends Shape{
+    void calculateArea(){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the value of r: ");
+        int r = input.nextInt();
+        double area = 3.1416*r*r;
+        System.out.println("Area of circle: "+area);
+    }
+}
+class Square extends Shape{
+    void calculateArea(){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the value of a: ");
+        int a = input.nextInt();
+        int area1 = a*a;
+        System.out.println("Area of circle: "+area1);
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Shape myshape = new Shape();
+        myshape.calculateArea();
+        
+        Circle mycircle = new Circle();
+        mycircle.calculateArea();
+        
+        Square mysquare = new Square();
+        mysquare.calculateArea();
+    }
+}
