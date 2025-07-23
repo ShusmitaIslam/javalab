@@ -1,0 +1,30 @@
+class Vehicle{
+    String start(){
+        String message = "Vehicle is starting...";
+        System.out.println(message);
+        return message;
+    }
+}
+class Bike extends Vehicle{
+    String start(){
+        String message = "Bike is starting with a kick.";
+        System.out.println(message);
+        return message;
+    }
+}
+class Car extends Vehicle{
+    String start(){
+        String message = "Car is starting with a key.";
+        System.out.println(message);
+        return message;
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Bike b = new Bike();
+        Car c = new Car();
+       
+        b.start();
+        c.start();
+    }
+}

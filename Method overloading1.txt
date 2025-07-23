@@ -1,0 +1,28 @@
+import java.util.Scanner;
+class Calculator{
+    int a, b, c, sum=0;
+    
+    int add(int a, int b){
+        sum = a + b;
+        return sum;
+    }
+    int add(int a, int b, int c){
+        sum = a + b + c;
+        return sum;
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Calculator cal = new Calculator();
+        
+        Scanner input = new Scanner(System.in);
+        System.out.println("Please enter the three inputs: ");
+        int a = input.nextInt();
+        int b = input.nextInt();
+        int c = input.nextInt();
+       
+        System.out.println("Sum of the two methods are: "); 
+        System.out.println(cal.add(a,b));
+        System.out.println(cal.add(a,b,c));
+    }
+}
