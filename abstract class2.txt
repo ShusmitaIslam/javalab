@@ -1,0 +1,27 @@
+abstract class Playable {
+    abstract String Play(String message);
+}
+
+class Cricket extends Playable {
+    String Play(String message) {
+        String result = "Playing cricket...";
+        System.out.println(result);
+        return result;
+    }
+}
+class Football extends Playable {
+    String Play(String message) {
+        String result = "Playing football...";
+        System.out.println(result);
+        return result;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Cricket c = new Cricket();
+        Football f = new Football();
+        c.Play("Play game...");
+        f.Play("Play game...");
+    }
+}

@@ -1,0 +1,40 @@
+abstract class Account{
+    abstract String calculateInterest();
+}
+class SavingsAccount extends Account{
+    String calculateInterest(){
+        String message = "Interest calculated for Savings Account.";
+        System.out.println(message);
+        return message;
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        SavingsAccount a = new SavingsAccount();
+        a.calculateInterest();
+    }
+}
+
+
+----------------------------------
+Another way,
+
+
+abstract class Account {
+    abstract String calculateInterest(String message);
+}
+
+class SavingsAccount extends Account {
+    String calculateInterest(String message) {
+        String result = "Interest calculated for Savings Account. Message: " + message;
+        System.out.println(result);
+        return result;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        SavingsAccount a = new SavingsAccount();
+        a.calculateInterest("Calculating interest...");
+    }
+}
