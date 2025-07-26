@@ -1,0 +1,70 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+class Book{
+    String title, author;
+    boolean isAvailable;
+    
+    Book(String title, String author){
+        this.title = title;
+        this.author = author;
+        this.isAvailable = true;
+    }
+    void borrowBook(){
+        if(isAvailable){
+            isAvailable = false;
+            System.out.println(title+" has been borrowed.");
+        }
+        else{
+            System.out.println(title+" is already borrowed.");
+        }
+    }
+    void returnBook(){
+        isAvailable = true;
+        System.out.println(title+" has been returned.");
+    }
+}
+class Library{
+    ArrayList<Book> books = new ArrayList<>();
+    
+    void addBook(Book book){
+        books.add(book);
+    }
+    void listBooks(){
+        for(Book book : books){
+            String status = book.isAvailable?"Available":"Borrowed";
+            System.out.println(book.title+" by"+book.author+"-"+status);
+        }
+    }
+    void searchBook(String title){
+        for(Book book : books){
+            if(book.title.equalsIgnoreCase(title)){
+                System.out.println("Found: "+book.title+ " by " +book.author);
+                return;
+            }
+        }
+        System.out.println("Book not found.");
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Library library = new Library();
+        
+        Book b1 = new Book("Harry Potter", "J.K Rowling");
+        Book b2 = new Book("The Alchemist", "Paulo Coelho");
+        
+        library.addBook(b1);
+        library.addBook(b2);
+        
+        library.listBooks();
+        
+        b1.borrowBook();
+        
+        library.listBooks();
+        
+        b1.returnBook();
+        
+        library.listBooks();
+        
+        library.searchBook("The Alchemist");
+    }
+}
