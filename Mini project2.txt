@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+class Student{
+    String name;
+    ArrayList<Integer> grades = new ArrayList<>();
+    
+    Student(String name){
+        this.name = name;
+    }
+    void addGrade(int grade){
+        grades.add(grade);
+    }
+    double calculateAverage(){
+        if(grades.isEmpty()){
+            return 0;
+        }
+        else{
+            int sum = 0;
+            for(int g : grades){
+                sum += g;
+            }
+            return (double) sum / grades.size();
+        }
+    }
+    void printDetails(){
+        System.out.println("Name: "+name+" & Average grade: "+calculateAverage());
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student("Anik");
+        s1.addGrade(88);
+        s1.addGrade(85);
+        s1.addGrade(73);
+        s1.printDetails();
+        
+        Student s2 = new Student("Bonna");
+        s2.addGrade(67);
+        s2.addGrade(85);
+        s2.addGrade(70);
+        s2.printDetails();
+    }
+}
