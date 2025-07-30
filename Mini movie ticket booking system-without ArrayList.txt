@@ -1,0 +1,37 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+class Movie{
+    int seat, ticket_booked;
+    
+    Movie(int seat, int ticket_booked){
+        this.seat = seat;
+        this.ticket_booked = ticket_booked;
+    }
+    void BookTicket(){
+        if(ticket_booked<seat){
+            ticket_booked++;
+            System.out.println("Ticket booked successfully.");
+        }
+        else{
+            System.out.println("Seat is not avaialable.");
+        }
+        
+    }
+    void ShowStatus(){
+        int seat_available = seat - ticket_booked;
+         System.out.println("Available seat number is: " + seat_available);
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Movie m = new Movie(50,30);
+        Scanner input = new Scanner(System.in);
+        System.out.print("Do you want to book ticket? (Yes/No): ");
+        String choice = input.nextLine();
+        if(choice.equalsIgnoreCase("Yes")){
+            m.BookTicket();
+        }
+        m.ShowStatus();
+    }
+}
