@@ -1,0 +1,46 @@
+enum Status{
+    OPEN,
+    IN_PROGRESS,
+    RESOLVED
+}
+
+class Bug{
+    int id;
+    String title;
+    String description;
+    Status status;
+    
+    Bug(int id, String title, String description){
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.status = Status.OPEN;
+    }
+    
+    void printDetails(){
+        System.out.println("Bug id: "+id);
+        System.out.println("Title: "+title);
+        System.out.println("Description: "+description);
+        System.out.println("Status: "+status);
+        System.out.println("------------------------------");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Bug b1 = new Bug(1,"Registration Issue","Register button is not working.");
+        Bug b2 = new Bug(2,"Login Issue","Login button is not working.");
+        
+        b1.printDetails();
+        b2.printDetails();
+        
+        b1.status = Status.IN_PROGRESS;
+        b2.status = Status.RESOLVED;
+        
+        System.out.println("\n \n \n------------------------------");
+        System.out.println("After updating issues:");
+        System.out.println("------------------------------");
+        b1.printDetails();
+        b2.printDetails();
+    }
+}
