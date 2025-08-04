@@ -1,0 +1,29 @@
+enum Status{
+        OPEN, IN_PROGRESS, RESOLVED
+    }
+    
+class Bug{
+    int id;
+    String title;
+    String description;
+    Status status;
+    
+    Bug(int id, String title, String description){
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.status = Status.OPEN;
+    }
+    void printBug(){
+        System.out.println("Id: "+id);
+        System.out.println("Ttile: "+title);
+        System.out.println("Description: "+description);
+        System.out.println("Status: "+status);
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Bug b1 = new Bug(1,"Login Issue", "User can login with invalid password.");
+        b1.printBug();
+    }
+}
